@@ -30,9 +30,9 @@
 - (void) create
 {
 	helloText = [FlxText textWithWidth:FlxG.width
-								text:@"HelloWorld"
-								font:nil
-								size:26.0];
+								  text:@"HelloWorld"
+								  font:nil
+								  size:26.0];
 	helloText.color = 0xffffffff;
 	helloText.alignment = @"center";
 	helloText.x = 0;

@@ -23,10 +23,10 @@
 	if (FlxG.iPad || FlxG.retinaDisplay)
 		tbZoom = YES;
 	if ((self = [super initWithOrientation:FlxGameOrientationLandscape
-					 state:@"___PROJECTNAME___State"
-						zoom:1.0
-				useTextureBufferZoom:tbZoom
-						 modelZoom:1.0])) {
+									 state:@"___PROJECTNAME___State"
+									  zoom:1.0
+					  useTextureBufferZoom:tbZoom
+								 modelZoom:1.0])) {
 		if (FlxG.retinaDisplay)
 			self.frameInterval = 1;
 	}

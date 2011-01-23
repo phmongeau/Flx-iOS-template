@@ -25,11 +25,11 @@ void preloadTextureAtlases()
 		infoDictionary = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], @"iPadTextureAtlas.atlas"]];
 	else
 		infoDictionary = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], @"textureAtlas.atlas"]];
-
+	
 	//can only contain NSData, NSDate, NSNumber, NSString, NSArray, and NSDictionary
-
+	
 	NSDictionary * images = [infoDictionary objectForKey:@"images"];
-
+	
 	for (NSString * image in images) {
 		NSDictionary * imageInfo = [images objectForKey:image];
 		CGRect placement;
@@ -40,11 +40,11 @@ void preloadTextureAtlases()
 		NSString * atlas = [imageInfo objectForKey:@"atlas"];
 		SemiSecretTexture * textureAtlas = [FlxG addTextureWithParam1:atlas param2:NO];
 		SemiSecretTexture * texture = [SemiSecretTexture textureWithAtlasTexture:textureAtlas
-								 offset:placement.origin
-								 size:placement.size];
+																		  offset:placement.origin
+																			size:placement.size];
 		[FlxG setTexture:texture forKey:image];
 	}
-
+	
 }
 
 @implementation AppDelegate
@@ -57,10 +57,10 @@ void preloadTextureAtlases()
 	[SemiSecretTexture setTextureFilteringMode:SSTextureFilteringNearest];
 	
 	[application setStatusBarOrientation:UIInterfaceOrientationLandscapeRight
-				 animated:NO];
-
+								animated:NO];
+	
 	game = [[___PROJECTNAME___ alloc] init];
-
+	
 	//preload textures here, now that opengl stuff should be created
 	//preloadTextureAtlases();
 	

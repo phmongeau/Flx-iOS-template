@@ -26,23 +26,23 @@
 		// kind of forward thinking, eh?
 		if (iPad) {
 			NSString * iPadpath2x = [[path stringByDeletingLastPathComponent]
-				 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@@2x~ipad.%@",
-										[[path lastPathComponent] stringByDeletingPathExtension],
-										[path pathExtension]]];
+									 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@@2x~ipad.%@",
+																	 [[path lastPathComponent] stringByDeletingPathExtension],
+																	 [path pathExtension]]];
 			if ([[NSFileManager defaultManager] fileExistsAtPath:iPadpath2x])
 				return [self initWithContentsOfFile:iPadpath2x];
 		}
 		NSString * path2x = [[path stringByDeletingLastPathComponent]
-				 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@@2x.%@",
-										[[path lastPathComponent] stringByDeletingPathExtension],
-										[path pathExtension]]];
+							 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@@2x.%@",
+															 [[path lastPathComponent] stringByDeletingPathExtension],
+															 [path pathExtension]]];
 		if ([[NSFileManager defaultManager] fileExistsAtPath:path2x])
 			return [self initWithContentsOfFile:path2x];
 	} else if (iPad) {
 		NSString * iPadpath = [[path stringByDeletingLastPathComponent]
-				 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@~ipad.%@",
-										[[path lastPathComponent] stringByDeletingPathExtension],
-										[path pathExtension]]];
+							   stringByAppendingPathComponent:[NSString stringWithFormat:@"%@~ipad.%@",
+															   [[path lastPathComponent] stringByDeletingPathExtension],
+															   [path pathExtension]]];
 		if ( [[NSFileManager defaultManager] fileExistsAtPath:iPadpath] )
 			return [self initWithContentsOfFile:iPadpath];
 	}
