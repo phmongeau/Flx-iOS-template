@@ -1,8 +1,8 @@
 //
-//  MenuState.m
-//  Canabalt
+//	MenuState.m
+//	Canabalt
 //
-//  Copyright Semi Secret Software 2009-2010. All rights reserved.
+//	Copyright Semi Secret Software 2009-2010. All rights reserved.
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -21,42 +21,42 @@
 
 - (id) init
 {
-  if ((self = [super init])) {
-    self.bgColor = 0xff35353d;
-  }
-  return self;
+	if ((self = [super init])) {
+		self.bgColor = 0xff35353d;
+	}
+	return self;
 }
 
 - (void) create
 {
-  helloText = [FlxText textWithWidth:FlxG.width
+	helloText = [FlxText textWithWidth:FlxG.width
 								text:@"HelloWorld"
 								font:nil
 								size:26.0];
-  helloText.color = 0xffffffff;
-  helloText.alignment = @"center";
-  helloText.x = 0;
-  helloText.y = 15;
-  [self add:helloText];
+	helloText.color = 0xffffffff;
+	helloText.alignment = @"center";
+	helloText.x = 0;
+	helloText.y = 15;
+	[self add:helloText];
 
-    
+		
 }
 
 - (void) dealloc
 {
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 
-  [super dealloc];
+	[super dealloc];
 }
 
 
 - (void) update
 {
-  
-  
-  [super update];
+	
+	
+	[super update];
 
-  
+	
 }
 
 

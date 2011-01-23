@@ -1,8 +1,8 @@
 //
-//  Canabalt.m
-//  Canabalt
+//	Canabalt.m
+//	Canabalt
 //
-//  Copyright Semi Secret Software 2009-2010. All rights reserved.
+//	Copyright Semi Secret Software 2009-2010. All rights reserved.
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -19,18 +19,18 @@
 
 - (id) init
 {
-  BOOL tbZoom = NO;
-  if (FlxG.iPad || FlxG.retinaDisplay)
-    tbZoom = YES;
-  if ((self = [super initWithOrientation:FlxGameOrientationLandscape
-				   state:@"___PROJECTNAME___State"
-				    zoom:1.0
-		    useTextureBufferZoom:tbZoom
-			       modelZoom:1.0])) {
-    if (FlxG.retinaDisplay)
-      self.frameInterval = 1;
-  }
-  return self;
+	BOOL tbZoom = NO;
+	if (FlxG.iPad || FlxG.retinaDisplay)
+		tbZoom = YES;
+	if ((self = [super initWithOrientation:FlxGameOrientationLandscape
+					 state:@"___PROJECTNAME___State"
+						zoom:1.0
+				useTextureBufferZoom:tbZoom
+						 modelZoom:1.0])) {
+		if (FlxG.retinaDisplay)
+			self.frameInterval = 1;
+	}
+	return self;
 }
 
 @end

@@ -1,8 +1,8 @@
 //
-//  Canabalt.h
-//  Canabalt
+//	Canabalt.h
+//	Canabalt
 //
-//  Copyright Semi Secret Software 2009-2010. All rights reserved.
+//	Copyright Semi Secret Software 2009-2010. All rights reserved.
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
